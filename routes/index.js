@@ -41,8 +41,9 @@ router.get('/userlist', function(req, res) {
 });
 
 router.get('/token', function(request, response) {
-  var identity = request.user.username;
+  // var identity = request.user.username;
 
+  var identity = randomUsername();
   // Create an access token which we will sign and return to the client,
   // containing the grant we just created
   var token = new AccessToken(
